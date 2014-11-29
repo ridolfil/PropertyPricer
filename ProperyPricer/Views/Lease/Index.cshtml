@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ProperyPricer.Models.LeaseModels>
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h1>Tenants <small>Property Name</small></h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+            <table class="table">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Unit</th>
+                    <th>Area</th>
+                    <th>Lease Start</th>
+                    <th>Lease End</th>
+                    <th>Initial Rent</th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+        <div class="col-md-4">
+            <h3>Cashflows</h3>
+        </div>
+    </div>
+
+</div>
+
