@@ -22,3 +22,64 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.columnTitle{
+    padding:8px 30px;
+    margin-bottom:20px;
+}
+
+.columnTitle h3{
+    color:rgb(87, 85, 85);
+    font-size:18px;
+    margin:0px;
+}
+
+#cashflowTitle{
+    background-color: #DEF5E0;
+}
+
+#propNameTitle{
+    background-color: #F5F5DE;
+}
+#cashflowColumn{
+    background-color:rgb(252, 252, 250);
+    height:300px;
+}
+
+#addBtn{
+    border-color:white;
+    -webkit-transition: all ease 500ms;
+    margin-bottom:10px
+}
+
+#addBtn:hover{
+    background-color: #FAFDFF;
+border-color: #F4F4F4;
+}
+
+#addLeaseForm {
+    display:none;
+    width: 120%;
+    margin-bottom: 30px;
+    background-color: #FFF8EC;
+    position: relative;
+    border-radius: 4px;
+    float:right;
+    padding:5px 5px
+}
+
+    #addLeaseForm tr {
+        font-weight: normal;
+        color: #808080;
+    }
+
+    #addLeaseForm td input {
+        width: 100%;
+    }
+
+#sbtBtn{
+    border-color:#E0E0E0;
+    background-color:#FFFDF4;
+    border-radius:3px;
+
+}

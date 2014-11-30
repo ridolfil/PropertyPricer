@@ -40,7 +40,7 @@ namespace ProperyPricer.Controllers
                     Area=345,
                     InitialRent = 1000},
                 new LeaseModels(){
-                    TenantName="tenant 3",
+                    TenantName="Tenant 3",
                     LeaseStart = new DateTime(2013,5,12),
                     LeaseEnd = new DateTime(2015,8,28),
                     Unit = "unit 3",
