@@ -15,12 +15,36 @@ namespace ProperyPricer.Controllers
         // GET: Lease
         public ActionResult Index()
         {
-            leaseList = testFill();
+             leaseList = testFill();
 
             return View(leaseList);
         }
 
+        [HttpPost]
+        public ActionResult AddLease(LeaseModels lease)
+        {
+            leaseList = testFill();
+            leaseList.Add(lease);
+            return View("Index", leaseList);
+        }
 
+
+        public ActionResult ShowCashflows(string id)
+        {
+            List< CashflowViewModel> lcf = new List<CashflowViewModel>();
+
+            int lId = int.Parse(id);
+
+            CashflowViewModel a = new CashflowViewModel()
+            {
+                Date = new DateTime(2012, 3, 4),
+                Amount = lId
+            };
+
+            lcf.Add(a);
+
+            return PartialView("_LeaseCashflows",lcf);
+        }
 
         private List<LeaseModels> testFill(){
 

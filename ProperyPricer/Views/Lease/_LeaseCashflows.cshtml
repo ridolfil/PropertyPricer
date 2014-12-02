@@ -1,0 +1,15 @@
+﻿@model IEnumerable<ProperyPricer.Models.CashflowViewModel>
+
+
+<table class="table table-condensed table-striped">
+    <tr>
+        <th>Date</th>
+        <th>Amount</th>
+    </tr>
+    @foreach(var item in Model){
+        <tr>
+            <td>@Html.DisplayFor(t => item.Date)</td>
+            <td>@Html.DisplayFor(t => item.Amount)</td>
+        </tr>
+    }
+</table>

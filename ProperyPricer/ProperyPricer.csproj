@@ -169,6 +169,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CashflowViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LeaseModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -257,6 +258,7 @@
     <Content Include="Views\Lease\Index.cshtml">
       <BrowseToURL>~/Lease/Index</BrowseToURL>
     </Content>
+    <Content Include="Views\Lease\_LeaseCashflows.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
