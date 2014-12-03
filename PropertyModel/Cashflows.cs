@@ -62,7 +62,11 @@ namespace PropertyModel
             return l;
         }
 
-
+        public IDictionary<DateTime, double> getCashflows()
+        {
+            IDictionary<DateTime, double> dic = cf;
+            return dic;
+        }
 
         private SortedDictionary<DateTime, double> cf;
     }

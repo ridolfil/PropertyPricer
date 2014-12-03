@@ -11,11 +11,24 @@ namespace ProperyPricer.Controllers
 {
     public class LeaseController : Controller
     {
+
+        public LeaseController()
+        {
+            if (Session == null)
+            {
+                leaseList = testFill();
+
+                System.Web.HttpContext.Current.Session["leases"] = leaseList;
+            }else{
+                leaseList = Session["leases"] as List<LeaseModels>;
+            }
+
+        }
+
         private List<LeaseModels> leaseList;
         // GET: Lease
         public ActionResult Index()
         {
-             leaseList = testFill();
 
             return View(leaseList);
         }
@@ -23,7 +36,6 @@ namespace ProperyPricer.Controllers
         [HttpPost]
         public ActionResult AddLease(LeaseModels lease)
         {
-            leaseList = testFill();
             leaseList.Add(lease);
             return View("Index", leaseList);
         }
@@ -33,15 +45,23 @@ namespace ProperyPricer.Controllers
         {
             List< CashflowViewModel> lcf = new List<CashflowViewModel>();
 
-            int lId = int.Parse(id);
+            int lId = int.Parse(id)-1;
 
-            CashflowViewModel a = new CashflowViewModel()
+            Lease l = new Lease(leaseList[lId].LeaseStart,leaseList[lId].LeaseEnd,leaseList[lId].InitialRent);
+            
+
+            IDictionary<DateTime, double> cf = l.getCashflows();
+
+            foreach (var i in cf)
             {
-                Date = new DateTime(2012, 3, 4),
-                Amount = lId
-            };
+                CashflowViewModel a = new CashflowViewModel()
+                {
+                    Amount = i.Value,
+                    Date = i.Key
+                };
 
-            lcf.Add(a);
+                lcf.Add(a);
+            }
 
             return PartialView("_LeaseCashflows",lcf);
         }

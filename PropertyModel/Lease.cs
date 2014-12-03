@@ -27,9 +27,10 @@ namespace PropertyModel
         public double InitialRent { get; private set; }
         public double ExitRent { get; private set; }
 
-        public Cashflows getCashflows()
+        public IDictionary<DateTime,double> getCashflows()
         {
-            return leaseCF;
+
+            return leaseCF.getCashflows();
         }
 
         private Cashflows leaseCF;
