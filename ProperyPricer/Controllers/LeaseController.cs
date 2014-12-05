@@ -14,12 +14,14 @@ namespace ProperyPricer.Controllers
 
         public LeaseController()
         {
-            if (Session == null)
+
+            if (System.Web.HttpContext.Current.Session["leases"] == null)
             {
                 leaseList = testFill();
 
                 System.Web.HttpContext.Current.Session["leases"] = leaseList;
             }else{
+                leaseList = new List<LeaseModels>();
                 leaseList = Session["leases"] as List<LeaseModels>;
             }
 
@@ -37,6 +39,7 @@ namespace ProperyPricer.Controllers
         public ActionResult AddLease(LeaseModels lease)
         {
             leaseList.Add(lease);
+            System.Web.HttpContext.Current.Session["leases"] = leaseList;
             return View("Index", leaseList);
         }
 

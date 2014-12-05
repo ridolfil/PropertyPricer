@@ -44,6 +44,8 @@ textarea {
 #cashflowColumn{
     background-color:rgb(252, 252, 250);
     padding: 10px 25px;
+    max-height: 900px;
+    overflow-y:auto;
 }
 
 #addBtn{
@@ -82,4 +84,57 @@ border-color: #F4F4F4;
     background-color:#EEFFEA;
     border-radius:3px;
 
+}
+
+.shadowedBox {
+    padding: 5px;
+    box-shadow: 0 0 1px rgba(0,0,0,.1),-1px 2px 3px rgba(0,0,0,.15);
+}
+
+#cashflowColumn > .table-condensed tbody > tr > td, #cashflowColumn > .table-condensed tbody > tr > th {
+    padding: 3px;
+    text-align: center;
+    font-size: 11px;
+}
+
+.table-condensed tbody > tr > td {
+    padding: 4px;
+    font-size: 14px;
+}
+
+#pricerNavbar {
+    margin: 10px 0px;
+    width: 100%;
+    background-color: #EFF8FF;
+    padding-left: 80px;
+}
+
+    #pricerNavbar > li > a {
+        padding-left: 30px;
+        padding-right: 30px;
+        color: #7D8F9D;
+    }
+
+        #pricerNavbar > li > a:hover {
+            background-color: #EDF7E4;
+        }
+
+footer {
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    background-color: #F7F7F7;
+    bottom: -20px;
+    position: relative;
+    line-height: 30px;
+    margin-top:20px;
+    clear:both
+}
+
+#leftMenu{
+    background-color: #B5CBC1;
+height: 100vh;
+}
+#tenantsBox{
+    padding: 0 15px;
 }
