@@ -165,6 +165,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LeaseController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PropertyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -179,6 +180,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\img1.jpg" />
+    <Content Include="Content\images\img2.jpg" />
     <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\jquery-ui.min.css" />
     <Content Include="Content\jquery-ui.structure.css" />
@@ -256,10 +259,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Lease\Index.cshtml">
-      <BrowseToURL>~/Lease/Index</BrowseToURL>
+    <Content Include="Views\Lease\Leases.cshtml">
+      <BrowseToURL>~/Lease/Leases</BrowseToURL>
     </Content>
     <Content Include="Views\Lease\_LeaseCashflows.cshtml" />
+    <Content Include="Views\Property\Properties.cshtml">
+      <BrowseToURL>~/Property/Index</BrowseToURL>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

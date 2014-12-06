@@ -29,7 +29,7 @@ namespace ProperyPricer.Controllers
 
         private List<LeaseModels> leaseList;
         // GET: Lease
-        public ActionResult Index()
+        public ActionResult Leases()
         {
 
             return View(leaseList);
@@ -40,7 +40,7 @@ namespace ProperyPricer.Controllers
         {
             leaseList.Add(lease);
             System.Web.HttpContext.Current.Session["leases"] = leaseList;
-            return View("Index", leaseList);
+            return View("Leases", leaseList);
         }
 
 

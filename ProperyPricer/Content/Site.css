@@ -34,6 +34,10 @@ textarea {
     margin:0px;
 }
 
+#propertiesTitle{
+    background-color: rgb(252, 233, 215);
+}
+
 #cashflowTitle{
     background-color: #DEF5E0;
 }
@@ -115,10 +119,10 @@ border-color: #F4F4F4;
         color: #7D8F9D;
     }
 
-        #pricerNavbar > li > a:hover {
+        #pricerNavbar > li > a:hover,#pricerNavbar > li > a.active {
             background-color: #EDF7E4;
         }
-
+        
 footer {
     text-align: center;
     width: 100%;
@@ -132,9 +136,42 @@ footer {
 }
 
 #leftMenu{
-    background-color: #B5CBC1;
+    
 height: 100vh;
 }
 #tenantsBox{
     padding: 0 15px;
+}
+
+.propertyBox {
+
+}
+
+    .propertyBox > dl {
+        font-size: 11px;
+    }
+
+        .propertyBox > dl > dt {
+            float: left;
+            clear: left;
+            width: 40%;
+            margin-left:15px;
+        }
+
+
+
+.propertyBox a.goLeases{
+    float: right;
+border: none;
+border-radius:0px;
+width:90px;
+background-color: #F5F5F5
+}
+
+.propertyBox a.editProperty{
+    float: left;
+border-radius:0px;
+background-color: #F5F5F5;
+border: none;
+width:90px;
 }

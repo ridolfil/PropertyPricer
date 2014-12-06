@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Properties";
+}
+
+
+<ul class="nav navbar-nav" id="pricerNavbar">
+    <li><a href="#">PORTFOLIO</a></li>
+    <li>@Html.ActionLink("PROPERTIES", "Properties", "Index", new { @class = "active" })</li>
+    <li>@Html.ActionLink("LEASES", "Leases", "Lease")</li>
+</ul>
+<div class="row">
+    <div class="col-md-2 shadowedBox" id="leftMenu" style="background-color:#F4D29C"></div>
+    <div class="col-md-10">
+        <div class="container body-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="shadowedBox">
+                        <div class="columnTitle" id="propertiesTitle">
+                            <h3>Property</h3>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3 propertyBox shadowedBox">
+                                    <img class="img-responsive" src="~/Content/images/img2.jpg"/>
+                                    <dl>
+                                        <dt>Name:</dt>
+                                        <dd>Some Name</dd>
+                                        <dt>Address:</dt>
+                                        <dd>Some Address</dd>
+                                    </dl>
+
+                                    <a  class=" btn btn-default btn-sm editProperty" href="#"><span class="glyphicon glyphicon-wrench" aria-hidden="true" style="margin-right:10px; color:#D38D7D; font-size:14px"></span>Edit</a>
+                                    <a class="btn btn-default btn-sm goLeases" href="~/Lease/Leases">Leases<span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="margin-left:10px;color:#A9C8A7; font-size:14px"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
