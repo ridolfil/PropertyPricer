@@ -22,7 +22,7 @@ namespace ProperyPricer.Controllers
                 System.Web.HttpContext.Current.Session["leases"] = leaseList;
             }else{
                 leaseList = new List<LeaseModels>();
-                leaseList = Session["leases"] as List<LeaseModels>;
+                leaseList = System.Web.HttpContext.Current.Session["leases"] as List<LeaseModels>;
             }
 
         }
