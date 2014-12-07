@@ -144,14 +144,16 @@ height: 100vh;
 }
 
 .propertyBox {
-
+    width:80%;
+    display:block;
+    margin:10px auto;
 }
 
-    .propertyBox > dl {
+    .propertyBox  dl {
         font-size: 11px;
     }
 
-        .propertyBox > dl > dt {
+        .propertyBox  dl  dt {
             float: left;
             clear: left;
             width: 40%;
@@ -160,18 +162,21 @@ height: 100vh;
 
 
 
-.propertyBox a.goLeases{
-    float: right;
-border: none;
-border-radius:0px;
-width:90px;
-background-color: #F5F5F5
-}
 
-.propertyBox a.editProperty{
+.propertyBox a.btnProp{
     float: left;
 border-radius:0px;
-background-color: #F5F5F5;
+background-color: #D8D8D8;
 border: none;
-width:90px;
+font-size:10px;
+padding:2px 6px;
+}
+
+.darkerBox{
+    background-color:#F9F9F9;
+    padding:3px 4px;
+    margin-top:4px;
+    display:inline-block;
+    width:100%;
+    border: 1px solid #DADADA;
 }

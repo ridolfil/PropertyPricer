@@ -16,22 +16,31 @@
                 <div class="col-md-12">
                     <div class="shadowedBox">
                         <div class="columnTitle" id="propertiesTitle">
-                            <h3>Property</h3>
+                            <h3>Properties</h3>
                         </div>
                         <div class="container">
-                            <div class="row">
-                                <div class="col-md-3 propertyBox shadowedBox">
-                                    <img class="img-responsive" src="~/Content/images/img2.jpg"/>
-                                    <dl>
-                                        <dt>Name:</dt>
-                                        <dd>Some Name</dd>
-                                        <dt>Address:</dt>
-                                        <dd>Some Address</dd>
-                                    </dl>
 
-                                    <a  class=" btn btn-default btn-sm editProperty" href="#"><span class="glyphicon glyphicon-wrench" aria-hidden="true" style="margin-right:10px; color:#D38D7D; font-size:14px"></span>Edit</a>
-                                    <a class="btn btn-default btn-sm goLeases" href="~/Lease/Leases">Leases<span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="margin-left:10px;color:#A9C8A7; font-size:14px"></span></a>
-                                </div>
+
+                            <div class="row">
+                                @for (int i = 0; i < 7; i++)
+                                {
+                                    <div class="col-md-3">
+                                        <div class="propertyBox shadowedBox">
+                                            <img class="img-responsive" src="~/Content/images/img2.jpg" />
+                                            <div class="darkerBox">
+                                                <dl>
+                                                    <dt>Name:</dt>
+                                                    <dd>Some Name</dd>
+                                                    <dt>Address:</dt>
+                                                    <dd>Some Address</dd>
+                                                </dl>
+
+                                                <a class=" btn btn-default btn-sm btnProp" href="#"><span class="glyphicon glyphicon-wrench" aria-hidden="true" style="margin-right:5px; color:#D38D7D; font-size:10px"></span>Edit</a>
+                                                <a class="btn btn-default btn-sm btnProp" href="~/Lease/Leases" style="float:right">Leases<span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="margin-left:5px;color:#A9C8A7; font-size:10px"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
                             </div>
                         </div>
                     </div>
